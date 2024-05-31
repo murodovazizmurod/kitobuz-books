@@ -100,7 +100,7 @@ for a in data:
     book = response.json()
     try:
         print(a['id'], book['name_uz'], book['files'][0]['sizeText'])
-        if float(book['files'][0]['sizeText'].replace(' Mb', '')) > 30 or "Qozoq tili" in book['name_uz'] or "Tojik tili" in book['name_uz'] or "Qirg'iz tili" in book['name_uz'] or "Turkman tili" in book['name_uz'] or book['lang'] != 'uz' or "Qoraqalpoq tili" in book['name_uz']:
+        if "Qozoq tili" in book['name_uz'] or "Tojik tili" in book['name_uz'] or "Qirg'iz tili" in book['name_uz'] or "Turkman tili" in book['name_uz'] or book['lang'] != 'uz' or "Qoraqalpoq tili" in book['name_uz']:
             print(f'Skipped! {book["name_uz"]}')
             continue
         
